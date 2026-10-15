@@ -1,0 +1,4 @@
+# Reference captures and the pre-Next static clone — not part of the build.
+.firecrawl/
+legacy-static/
+DESIGN.md

@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+/* =========================================================
+   Design tokens — see DESIGN.md
+   Source system: 400dinâmicaspedagógicas.shop
+   ========================================================= */
+@theme {
+  --color-brand: #2563eb;
+  --color-brand-deep: #1d4ed8;
+  --color-brand-darkest: #1e3a8a;
+  --color-brand-tint: #eff6ff;
+  /* Lighter blue, used for the portrait frame in the author section. */
+  --color-brand-soft: #93c5fd;
+
+  --color-action: #22c55e;
+  --color-action-strong: #16a34a;
+  --color-action-tint: #f0fdf4;
+  --color-action-ink: #15803d;
+
+  --color-ink: #0f172a;
+  --color-body: #475569;
+  --color-muted: #94a3b8;
+
+  --color-surface: #ffffff;
+  --color-surface-alt: #f8fafc;
+  --color-line: #e2e8f0;
+
+  --color-urgent: #dc2626;
+  --color-urgent-tint: #fef2f2;
+  --color-star: #facc15;
+  --color-highlight: #f97316;
+
+  --font-sans: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+
+  --container-page: 896px;
+  --container-prose: 768px;
+
+  --shadow-card: 0 10px 30px rgb(2 6 23 / 0.08);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: var(--color-surface-alt);
+    color: var(--color-body);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: var(--color-ink);
+    line-height: 1.15;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      transition-duration: 0.01ms !important;
+      animation-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  /* Fluid heading scale measured from the source page. */
+  .t-display {
+    font-size: clamp(1.5rem, 6vw, 3rem);
+    font-weight: 900;
+    line-height: 1.12;
+  }
+
+  .t-h2 {
+    font-size: clamp(1.5rem, 4.4vw, 2.25rem);
+    font-weight: 800;
+    line-height: 1.11;
+  }
+
+  .t-h3 {
+    font-size: clamp(1.35rem, 3.4vw, 1.875rem);
+    font-weight: 800;
+    line-height: 1.25;
+  }
+}
